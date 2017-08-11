@@ -50,5 +50,29 @@ public class HelloWorldController {
 		return mv;
 	}
 	
+	@GetMapping("say-something")
+	public String makeAChoice(
+			@RequestParam(required=false, defaultValue="«silence»")
+			String choice,
+			String speechChoice,
+			Model updown
+		) {
+		//if speechChoice is yell
+		if (speechChoice.equals("yell")) {
+			//make choice loud
+			Yeller yellhold = new Yeller(choice);
+			String loud = yellhold.yell();
+			updown.addAttribute("output", loud);
+		} else {//otherwise
+			//make choice quiet
+			Whisperer quiethold = new Whisperer(choice);
+			String quiet = quiethold.quiet();
+			updown.addAttribute("output", quiet);
+		}
 		
+		return "helloworld/mixed-messages";
+	}
+		
+	
+	
 }
