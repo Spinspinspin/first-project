@@ -5,20 +5,20 @@ html, body, input, select, textarea, button {
 }
 
 html, body {
-  font-size: 14px;
+  font-size: 28px;
 }
 
 input, button {
-  font-size: 16px;
+  font-size: 32px;
 }
 
 input[type="text"],
 input[type="number"] {
   border: 0;
-  border-left: 4px solid transparent;
-  border-bottom: 2px solid #ECECEC;
+  border-left: 8px solid transparent;
+  border-bottom: 4px solid #ECECEC;
   outline: 0;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 input[type="text"]:invalid,
@@ -35,7 +35,7 @@ input[type="number"]:focus {
 
 button {
   border-radius: 0;
-  padding: 4px 8px;
+  padding: 8px 16px;
   border: 2px solid transparent;
   background-color: #008000;
   color: white;
